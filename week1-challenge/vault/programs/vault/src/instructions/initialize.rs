@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-use crate::{state::vault, Vault};
+use crate::VaultState;
 
 #[derive(Accounts)]
 pub struct InitializeVault<'info> {
@@ -14,15 +14,18 @@ pub struct InitializeVault<'info> {
         seeds = [b"vault",admin.key().as_ref()],
         bump
     )]
-    pub vault : Account<'info,Vault>,
+    pub vault : Account<'info,VaultState>,
+
+    
 
     pub system_program : Program<'info,System>
 }
 
 impl <'info> InitializeVault <'info> {
     pub fn initialize_vault(&mut self)-> Result<()>{
-        self.vault.set_inner(Vault { bump: self.vault.bump });
+        self.vault.set_inner(VaultState { bump: self.vault.bump });
         Ok(())
     }
-    
 }
+
+
