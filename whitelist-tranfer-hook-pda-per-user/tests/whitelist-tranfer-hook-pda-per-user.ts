@@ -19,10 +19,32 @@ describe("whitelist-tranfer-hook-pda-per-user", () => {
     }).rpc();
 
     const [whitelistPDATarget1,_] = anchor.web3.PublicKey.findProgramAddressSync(
-      [Buffer.from("whitelist"),target1.publicKey.toBuffer()],
+      [Buffer.from("whitelist"),target1.publicKey.toBytes()],
       program.programId
     )
 
+    const whitelistPDA = await program.account.whitelistPda.fetch(whitelistPDATarget1);
+    console.log(whitelistPDA);
     console.log("Your transaction signature", tx);
   });
+
+  it("Is Close the Whitelist", async () => {
+    const target1 = anchor.web3.Keypair.generate();
+
+    const tx = await program.methods.close().accounts({
+      admin : wallet.publicKey,
+      targetAddress : target1.publicKey
+    }).rpc();
+
+    const [whitelistPDATarget1,_] = anchor.web3.PublicKey.findProgramAddressSync(
+      [Buffer.from("whitelist"),target1.publicKey.toBytes()],
+      program.programId
+    )
+
+    const whitelistPDA = await program.account.whitelistPda.fetch(whitelistPDATarget1);
+    console.log(whitelistPDA);
+    console.log("Your transaction signature", tx);
+  });
+
+
 });
