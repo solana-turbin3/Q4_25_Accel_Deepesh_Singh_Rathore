@@ -18,4 +18,7 @@ pub mod whitelist_tranfer_hook_pda_per_user {
     pub fn initialize(ctx: Context<CreateWhitelistPDA>) -> Result<()> {
         ctx.accounts.create_whitelist_pda()
     }
+    pub fn close(ctx: Context<CloseWhitelistPDA>)-> Result<()>{
+        ctx.accounts.close_whitelist_pda()
+    }
 }

@@ -14,8 +14,8 @@ pub struct CreateWhitelistPDA<'info> {
     #[account(
         init,
         payer = admin,
-        space = 8,
-        seeds = [b"whiltelist",target_address.key().as_ref()],
+        space = 8 + WhitelistPDA::INIT_SPACE,
+        seeds = [b"whitelist",target_address.key().as_ref()],
         bump
     )]
     pub whiltelist_pda : Account<'info,WhitelistPDA>,

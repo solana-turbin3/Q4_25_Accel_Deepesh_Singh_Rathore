@@ -13,9 +13,9 @@ pub struct CloseWhitelistPDA<'info> {
 
     #[account(
         mut,
-        seeds = [b"whiltelist",target_address.key().as_ref()],
+        seeds = [b"whitelist",target_address.key().as_ref()],
         close = admin,
-        bump
+        bump = whiltelist_pda.bump
     )]
     pub whiltelist_pda : Account<'info,WhitelistPDA>,
     pub system_program : Program<'info,System>
@@ -23,7 +23,7 @@ pub struct CloseWhitelistPDA<'info> {
 
 impl<'info> CloseWhitelistPDA<'info>{
     pub fn close_whitelist_pda(&mut self)->Result<()>{
-        self.whiltelist_pda.is_whitelisted = false;
+        // self.whiltelist_pda.is_whitelisted = false;
         Ok(())
     }
 }
