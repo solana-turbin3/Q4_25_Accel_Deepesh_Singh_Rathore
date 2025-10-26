@@ -1,0 +1,9 @@
+/Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/deps/libsecp256k1-f81a887025a30084.d: /Users/deepeshsinghrathore/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsecp256k1-0.6.0/src/lib.rs /Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const.rs /Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const_gen.rs
+
+/Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/deps/liblibsecp256k1-f81a887025a30084.rmeta: /Users/deepeshsinghrathore/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsecp256k1-0.6.0/src/lib.rs /Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const.rs /Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const_gen.rs
+
+/Users/deepeshsinghrathore/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsecp256k1-0.6.0/src/lib.rs:
+/Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const.rs:
+/Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out/const_gen.rs:
+
+# env-dep:OUT_DIR=/Users/deepeshsinghrathore/Projects/Turbin3/Q4_25_Accel_Deepesh_Singh_Rathore/accel-pinocchio-escrow/target/debug/build/libsecp256k1-2ea4279cefb7ffcd/out
