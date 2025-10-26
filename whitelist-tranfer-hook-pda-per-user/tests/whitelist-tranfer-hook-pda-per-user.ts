@@ -36,13 +36,6 @@ describe("whitelist-tranfer-hook-pda-per-user", () => {
       targetAddress : target1.publicKey
     }).rpc();
 
-    const [whitelistPDATarget1,_] = anchor.web3.PublicKey.findProgramAddressSync(
-      [Buffer.from("whitelist"),target1.publicKey.toBytes()],
-      program.programId
-    )
-
-    const whitelistPDA = await program.account.whitelistPda.fetch(whitelistPDATarget1);
-    console.log(whitelistPDA);
     console.log("Your transaction signature", tx);
   });
 
