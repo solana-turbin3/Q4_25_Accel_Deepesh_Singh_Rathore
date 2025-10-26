@@ -15,7 +15,7 @@ declare_id!("22grD33JBxV7au5EB2Fc3y4etFkiUt5MwUGM8TMBad1w");
 pub mod vault {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+    pub fn initialize(ctx: Context<InitializeVault>) -> Result<()> {
+        ctx.accounts.initialize_vault()
     }
 }
