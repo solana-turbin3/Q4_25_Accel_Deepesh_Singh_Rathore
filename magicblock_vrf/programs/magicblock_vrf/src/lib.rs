@@ -15,7 +15,15 @@ declare_id!("DeKyCagVzospP15FxRjwavBPzzwuNHfSCEij1dCPUoXi");
 pub mod magicblock_vrf {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize_user::handler(ctx)
+    pub fn initialize_user(ctx: Context<InitializeUser>) -> Result<()> {
+        ctx.accounts.initialize_user(&ctx.bumps)
+    }
+
+    pub fn update_user(ctx : Context<UpdateUser>,new_data : u8)-> Result<()>{
+        ctx.accounts.update_user(new_data)
+    }
+
+    pub fn close_user(ctx : Context<CloseUser>)-> Result<()>{
+        ctx.accounts.close_user()
     }
 }
