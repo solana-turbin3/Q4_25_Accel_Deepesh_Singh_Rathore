@@ -33,7 +33,6 @@ impl <'info> Delegate<'info> {
             &self.user.key.as_ref(),
         ];
 
-
         self.delegate_user_account_pda(
             &self.user,
             pda_seeds,
