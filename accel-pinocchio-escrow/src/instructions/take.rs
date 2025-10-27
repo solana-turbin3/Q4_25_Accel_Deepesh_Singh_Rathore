@@ -14,11 +14,11 @@ pub fn process_make_instruction(
     msg!("Processing Make instruction");
 
     let [
-        maker,
+        taker,
         mint_a,
         mint_b,
         escrow_account,
-        maker_ata,
+        taker_ata,
         escrow_ata,
         system_program,
         token_program,
@@ -28,8 +28,8 @@ pub fn process_make_instruction(
         return Err(pinocchio::program_error::ProgramError::NotEnoughAccountKeys);
     };
 
-    let maker_ata_state = pinocchio_token::state::TokenAccount::from_account_info(&maker_ata)?;
-    if maker_ata_state.owner() != maker.key() {
+    let taker_ata_state = pinocchio_token::state::TokenAccount::from_account_info(&maker_ata)?;
+    if taker_ata_state.owner() != taker.key() {
         return Err(pinocchio::program_error::ProgramError::IllegalOwner);
     }
     if maker_ata_state.mint() != mint_a.key() {
@@ -60,6 +60,7 @@ pub fn process_make_instruction(
             space: Escrow::LEN as u64,
             owner: &crate::ID,
         }.invoke_signed(&[seeds.clone()])?;
+
 
         {
             let escrow_state = Escrow::from_account_info(escrow_account)?;
