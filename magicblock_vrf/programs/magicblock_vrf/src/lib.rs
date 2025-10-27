@@ -16,6 +16,6 @@ pub mod magicblock_vrf {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+        initialize_user::handler(ctx)
     }
 }
